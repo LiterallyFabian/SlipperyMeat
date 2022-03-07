@@ -17,6 +17,77 @@ $(document).ready(function () {
 
 
 function calculate() {
+    $('#form').hide();
+    $('#results').show();
+
+    let unhookOdds = 0.04;
+    let unhookAttempts = 3;
+    let unhookText =
+        `Base unhook odds: ${unhookOdds * 100}%.
+        <br>Base unhook attempts: ${unhookAttempts}.
+        <br>
+        <br><b>Bonuses:</b>
+        <br>`;
+
+    let slipperyMeat = getSlipperyMeat();
+    if (slipperyMeat.attempts > 0) {
+        unhookAttempts += slipperyMeat.attempts;
+        unhookOdds += slipperyMeat.odds;
+        unhookText += `<b>Slippery Meat</b>:
+        <br>Attempts: ${slipperyMeat.attempts}
+        <br>Odds: ${(slipperyMeat.odds * 100).toFixed(2)}%.
+        <br>
+        <br>`;
+    }
+
+    let personalLuck = getPersonalLuck();
+    if (personalLuck > 0) {
+        unhookOdds += personalLuck;
+        unhookText += `<b>Personal Luck</b>:
+        <br>Odds: ${(personalLuck * 100).toFixed(2)}%.
+        <br>
+        <br>`;
+    }
+
+    let upTheAnte = getUpTheAnte();
+    if (upTheAnte > 0) {
+        unhookOdds += upTheAnte;
+        unhookText += `<b>Up the Ante</b>:
+        <br>Odds: ${(upTheAnte * 100).toFixed(2)}%.
+        <br>
+        <br>`;
+    }
+
+    let sharedLuck = getSharedLuck();
+    if (sharedLuck > 0) {
+        unhookOdds += sharedLuck;
+        unhookText += `<b>Shared Luck</b>:
+        <br>Odds: ${(sharedLuck * 100).toFixed(2)}%.
+        <br>
+        <br>`;
+    }
+
+    unhookText += `Total unhook odds: ${(unhookOdds * 100).toFixed(2)}%.
+    <br>Total unhook attempts: ${unhookAttempts}.
+    <br>
+    <br>`;
+
+
+    let failOdds = 1 - unhookOdds;
+    for (let i = 0; i < unhookAttempts; i++) {
+        let oddsOfFailing = Math.pow(failOdds, i + 1);
+        let oddsOfSuccess = 1 - oddsOfFailing;
+
+        unhookText += `Odds of unhooking at least once in ${i + 1} attempts: ${(oddsOfSuccess * 100).toFixed(2)}%.
+        <br>`;
+
+        $(`#sim-${i+1}`).attr('src', Math.random() < oddsOfSuccess ? 'img/icons/IconStatusEffects_luck.webp' : 'img/icons/IconHelpLoading_hook.webp');
+    }
+
+    $(`#sim-${unhookAttempts+1}`).attr('src', 'img/icons/IconHelp_entity.webp');
+    $('.unhook-result').html(unhookText);
+
+    
 
 }
 

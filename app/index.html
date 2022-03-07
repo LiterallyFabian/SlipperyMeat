@@ -14,125 +14,142 @@
 <body>
     <div class="main-container">
         <h1>SELF-UNHOOK CALCULATOR</h1>
+        <div id="form">
+            <!--Slippery Meat selector-->
+            <h2>Slippery Meat</h2>
+            <div class="button-container">
+                <label for="slippery-meat0">
+                    <input type="radio" name="slippery-meat" value="0" class="perk-button" id="slippery-meat0" checked>
+                    <div class="perk-bg perk-bg-0 perk-selectable">
+                        <img src="img/icons/IconPerks_noPerk.webp" alt="perk-bg" class="perk-bg-img">
+                    </div>
+                </label>
 
-        <!--Slippery Meat selector-->
-        <h2>Slippery Meat</h2>
-        <div class="button-container">
-            <label for="slippery-meat0">
-                <input type="radio" name="slippery-meat" value="0" class="perk-button" id="slippery-meat0" checked>
-                <div class="perk-bg perk-bg-0 perk-selectable">
-                    <img src="img/icons/IconPerks_noPerk.webp" alt="perk-bg" class="perk-bg-img">
-                </div>
-            </label>
+                <label for="slippery-meat1">
+                    <input type="radio" name="slippery-meat" value="1" class="perk-button" id="slippery-meat1">
+                    <div class="perk-bg perk-bg-1 perk-selectable">
+                        <img src="img/icons/IconPerks_slipperyMeat.webp" alt="perk-bg" class="perk-bg-img">
+                    </div>
+                </label>
 
-            <label for="slippery-meat1">
-                <input type="radio" name="slippery-meat" value="1" class="perk-button" id="slippery-meat1">
-                <div class="perk-bg perk-bg-1 perk-selectable">
-                    <img src="img/icons/IconPerks_slipperyMeat.webp" alt="perk-bg" class="perk-bg-img">
-                </div>
-            </label>
+                <label for="slippery-meat2">
+                    <input type="radio" name="slippery-meat" value="2" class="perk-button" id="slippery-meat2">
+                    <div class="perk-bg perk-bg-2 perk-selectable">
+                        <img src="img/icons/IconPerks_slipperyMeat.webp" alt="perk-bg" class="perk-bg-img">
+                    </div>
+                </label>
 
-            <label for="slippery-meat2">
-                <input type="radio" name="slippery-meat" value="2" class="perk-button" id="slippery-meat2">
-                <div class="perk-bg perk-bg-2 perk-selectable">
-                    <img src="img/icons/IconPerks_slipperyMeat.webp" alt="perk-bg" class="perk-bg-img">
-                </div>
-            </label>
+                <label for="slippery-meat3">
+                    <input type="radio" name="slippery-meat" value="3" class="perk-button" id="slippery-meat3">
+                    <div class="perk-bg perk-bg-3 perk-selectable">
+                        <img src="img/icons/IconPerks_slipperyMeat.webp" alt="perk-bg" class="perk-bg-img">
+                    </div>
+                </label>
+            </div>
 
-            <label for="slippery-meat3">
-                <input type="radio" name="slippery-meat" value="3" class="perk-button" id="slippery-meat3">
-                <div class="perk-bg perk-bg-3 perk-selectable">
-                    <img src="img/icons/IconPerks_slipperyMeat.webp" alt="perk-bg" class="perk-bg-img">
+            <!--Personal luck selector-->
+            <h2>Your luck offering</h2>
+            <div class="button-container">
+                <label for="personal-luck0">
+                    <input type="radio" name="personal-luck" value="0" class="perk-button" id="personal-luck0" checked>
+                    <div class="perk-bg perk-bg-0 perk-selectable">
+                        <img src="img/icons/IconPerks_noPerk.webp" alt="perk-bg" class="perk-bg-img">
+                    </div>
+                </label>
+
+                <label for="personal-luck1">
+                    <input type="radio" name="personal-luck" value="1" class="perk-button" id="personal-luck1">
+                    <img src="img/icons/FulliconFavors_chalkPouch.webp" alt="perk-bg" class="perk-bg-img perk-selectable">
+                </label>
+
+                <label for="personal-luck2">
+                    <input type="radio" name="personal-luck" value="2" class="perk-button" id="personal-luck2">
+                    <img src="img/icons/FulliconFavors_creamChalkPouch.webp" alt="perk-bg" class="perk-bg-img perk-selectable">
+                </label>
+
+                <label for="personal-luck3">
+                    <input type="radio" name="personal-luck" value="3" class="perk-button" id="personal-luck3">
+                    <img src="img/icons/FulliconFavors_ivoryChalkPouch.webp" alt="perk-bg" class="perk-bg-img perk-selectable">
+                </label>
+            </div>
+
+            <!--Up the ante selector-->
+            <h2>Up the ante</h2>
+            <div class="button-container">
+                <div class="perk-bg perk-bg-active perk-bg-1">
+                    <img src="img/icons/IconPerks_upTheAnte.webp" alt="perk-bg" class="perk-bg-img">
+                    <div class="number">
+                        <span class="minus">-</span>
+                        <input type="text" value="0" id="up-the-ante-1" />
+                        <span class="plus">+</span>
+                    </div>
                 </div>
-            </label>
+
+                <div class="perk-bg perk-bg-active perk-bg-2">
+                    <img src="img/icons/IconPerks_upTheAnte.webp" alt="perk-bg" class="perk-bg-img">
+                    <div class="number">
+                        <span class="minus">-</span>
+                        <input type="text" value="0" id="up-the-ante-2" />
+                        <span class="plus">+</span>
+                    </div>
+                </div>
+
+                <div class="perk-bg perk-bg-active perk-bg-3">
+                    <img src="img/icons/IconPerks_upTheAnte.webp" alt="perk-bg" class="perk-bg-img">
+                    <div class="number">
+                        <span class="minus">-</span>
+                        <input type="text" value="0" id="up-the-ante-3" />
+                        <span class="plus">+</span>
+                    </div>
+                </div>
+            </div>
+            <br><br><br>
+            <!--Shared luck offerings selector-->
+            <h2>Shared luck offerings</h2>
+            <div class="button-container">
+                <div>
+                    <img src="img/icons/FulliconFavors_saltPouch.webp" alt="perk-bg" class="perk-bg-img">
+                    <div class="number">
+                        <span class="minus">-</span>
+                        <input type="text" value="0" id="shared-luck-1" />
+                        <span class="plus">+</span>
+                    </div>
+                </div>
+
+                <div>
+                    <img src="img/icons/FulliconFavors_blackSaltStatuette.webp" alt="perk-bg" class="perk-bg-img">
+                    <div class="number">
+                        <span class="minus">-</span>
+                        <input type="text" value="0" id="shared-luck-2" />
+                        <span class="plus">+</span>
+                    </div>
+                </div>
+
+                <div>
+                    <img src="img/icons/FulliconFavors_vigosJarOfSaltyLips.webp" alt="perk-bg" class="perk-bg-img">
+                    <div class="number">
+                        <span class="minus">-</span>
+                        <input type="text" value="0" id="shared-luck-3" />
+                        <span class="plus">+</span>
+                    </div>
+                </div>
+            </div>
+            <br><br><br>
+            <button onclick="calculate();">Calculate</button>
         </div>
 
-        <!--Personal luck selector-->
-        <h2>Your luck offering</h2>
-        <div class="button-container">
-            <label for="personal-luck0">
-                <input type="radio" name="personal-luck" value="0" class="perk-button" id="personal-luck0" checked>
-                <div class="perk-bg perk-bg-0 perk-selectable">
-                    <img src="img/icons/IconPerks_noPerk.webp" alt="perk-bg" class="perk-bg-img">
-                </div>
-            </label>
+        <div id="results">
+            <h2>Results</h2>
+            <p class="unhook-result"></p>
 
-            <label for="personal-luck1">
-                <input type="radio" name="personal-luck" value="1" class="perk-button" id="personal-luck1">
-                <img src="img/icons/FulliconFavors_chalkPouch.webp" alt="perk-bg" class="perk-bg-img perk-selectable">
-            </label>
-
-            <label for="personal-luck2">
-                <input type="radio" name="personal-luck" value="2" class="perk-button perk-selectable" id="personal-luck2">
-                <img src="img/icons/FulliconFavors_creamChalkPouch.webp" alt="perk-bg" class="perk-bg-img perk-selectable">
-            </label>
-
-            <label for="personal-luck3">
-                <input type="radio" name="personal-luck" value="3" class="perk-button" id="personal-luck3">
-                <img src="img/icons/FulliconFavors_ivoryChalkPouch.webp" alt="perk-bg" class="perk-bg-img perk-selectable">
-            </label>
-        </div>
-
-        <!--Up the ante selector-->
-        <h2>Up the ante</h2>
-        <div class="button-container">
-            <div class="perk-bg perk-bg-active perk-bg-1">
-                <img src="img/icons/IconPerks_upTheAnte.webp" alt="perk-bg" class="perk-bg-img">
-                <div class="number">
-                    <span class="minus">-</span>
-                    <input type="text" value="0" id="up-the-ante-1" />
-                    <span class="plus">+</span>
-                </div>
-            </div>
-
-            <div class="perk-bg perk-bg-active perk-bg-2">
-                <img src="img/icons/IconPerks_upTheAnte.webp" alt="perk-bg" class="perk-bg-img">
-                <div class="number">
-                    <span class="minus">-</span>
-                    <input type="text" value="0" id="up-the-ante-2" />
-                    <span class="plus">+</span>
-                </div>
-            </div>
-
-            <div class="perk-bg perk-bg-active perk-bg-3">
-                <img src="img/icons/IconPerks_upTheAnte.webp" alt="perk-bg" class="perk-bg-img">
-                <div class="number">
-                    <span class="minus">-</span>
-                    <input type="text" value="0" id="up-the-ante-3" />
-                    <span class="plus">+</span>
-                </div>
-            </div>
-        </div>
-
-        <!--Shared luck offerings selector-->
-        <h2>Shared luck offerings</h2>
-        <div class="button-container">
-            <div class="perk-bg perk-bg-active perk-bg-1">
-                <img src="img/icons/FulliconFavors_saltPouch.webp" alt="perk-bg" class="perk-bg-img">
-                <div class="number">
-                    <span class="minus">-</span>
-                    <input type="text" value="0" id="shared-luck-1" />
-                    <span class="plus">+</span>
-                </div>
-            </div>
-
-            <div class="perk-bg perk-bg-active perk-bg-2">
-                <img src="img/icons/FulliconFavors_blackSaltStatuette.webp" alt="perk-bg" class="perk-bg-img">
-                <div class="number">
-                    <span class="minus">-</span>
-                    <input type="text" value="0" id="shared-luck-2" />
-                    <span class="plus">+</span>
-                </div>
-            </div>
-
-            <div class="perk-bg perk-bg-active perk-bg-3">
-                <img src="img/icons/FulliconFavors_vigosJarOfSaltyLips.webp" alt="perk-bg" class="perk-bg-img">
-                <div class="number">
-                    <span class="minus">-</span>
-                    <input type="text" value="0" id="shared-luck-3" />
-                    <span class="plus">+</span>
-                </div>
-            </div>
+            <h2>Unhook simulation</h2>
+            <img id="sim-1">
+            <img id="sim-2">
+            <img id="sim-3">
+            <img id="sim-4">
+            <img id="sim-5">
+            <img id="sim-6">
+            <img id="sim-7">
         </div>
     </div>
 </body>
