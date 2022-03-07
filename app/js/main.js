@@ -86,9 +86,11 @@ function calculate() {
 
     $(`#sim-${unhookAttempts+1}`).attr('src', 'img/icons/IconHelp_entity.webp');
     $('.unhook-result').html(unhookText);
+}
 
-    
-
+function closeIt(){ // naming it close doesn't work. i hate js 
+    $('#form').show();
+    $('#results').hide();
 }
 
 /**
